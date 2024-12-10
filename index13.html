@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Білім класс</title>
+     <link rel="stylesheet" href="style13.css">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Білім класс</h1>
+
+        <!-- Кіру формасы -->
+        <form id="loginForm">
+            <h2>Кіру</h2>
+            <label for="loginUsername">Логин:</label>
+            <input type="text" id="loginUsername" placeholder="Логин енгізіңіз" required>
+            
+            <label for="loginPassword">Құпия сөз:</label>
+            <input type="password" id="loginPassword" placeholder="Құпия сөз енгізіңіз" required>
+            
+            <button type="submit">Кіру</button>
+        </form>
+
+        <!-- Негізгі жүйе -->
+        <div id="newsSystem" class="hidden">
+            <h2>Оқушылардың бағалары</h2>
+
+            <!-- Баға қосу (мұғалім үшін ғана) -->
+            <div id="gradeFormSection" class="hidden">
+                <form id="gradeForm">
+                    <label for="studentName">Оқушының аты-жөні:</label>
+                    <input type="text" id="studentName" placeholder="Оқушының аты-жөні" required>
+
+                    <label for="subject">Пән:</label>
+                    <input type="text" id="subject" placeholder="Пән" required>
+                    
+                    <label for="grade">Баға:</label>
+                    <input type="number" id="grade" placeholder="Баға" min="1" max="10" required>
+
+                    <label for="date">Күні:</label>
+                    <input type="date" id="date" required>
+                    
+                    <button type="submit">Баға қосу</button>
+                </form>
+            </div>
+
+            <!-- Бағаларды көрсету -->
+            <ul id="gradesList"></ul>
+
+            <!-- Баға өзгерту (тек әкімші үшін) -->
+            <div id="editGradeForm" class="hidden">
+                <h3>Бағаны өзгерту</h3>
+                <input type="text" id="editStudentName" placeholder="Оқушының аты-жөні" required>
+                <input type="text" id="editSubject" placeholder="Пән" required>
+                <input type="number" id="editGrade" placeholder="Баға" min="1" max="10" required>
+                <button id="saveGradeChanges">Өзгерістерді сақтау</button>
+            </div>
+
+            <button id="logoutButton">Шығу</button>
+        </div>
+    </div>
+    <script src="js3.js"></script>
+</body>
+</html>
